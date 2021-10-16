@@ -7,13 +7,13 @@ function set_size(){
 	if((width*3/4)>height){
 		let temp=width;
 		width=Math.floor(height*4/3);
-		body.style.margin_left=Math.floor((temp-width)/2)+"px";
-		body.style.margin_top="0px";
+		div.style.margin_left=Math.floor((temp-width)/2)+"px";
+		div.style.margin_top="0px";
 	}else{
 		let temp=height;
 		height=Math.floor(width*3/4);
-		body.style.margin_left="0px";
-		body.style.margin_top=Math.floor((temp-height)/2)+"px";
+		div.style.margin_left="0px";
+		div.style.margin_top=Math.floor((temp-height)/2)+"px";
 	}
 	div.style.width=width+"px";
 	div.style.height=height+"px";
