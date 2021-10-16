@@ -8,12 +8,12 @@ function set_size(){
 		let temp=width;
 		width=Math.floor(height*4/3);
 		temp=Math.floor((temp-width)/2);
-		div.style.padding="0px "+temp+"px 0px "+temp+"px";
+		div.style.padding="0px "+temp+"px";
 	}else{
 		let temp=height;
 		height=Math.floor(width*3/4);
 		temp=Math.floor((temp-height)/2);
-		div.style.padding=temp+"px"+"0px "+temp+"px 0px ";
+		div.style.padding=temp+"px"+"0px ";
 	}
 	div.style.width=width+"px";
 	div.style.height=height+"px";
