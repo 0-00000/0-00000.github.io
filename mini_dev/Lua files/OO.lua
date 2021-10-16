@@ -24,7 +24,7 @@ function OOClass.newObject(class_name)--创建这些管理类的实例化对象�
 	return false
 end
 --Event对象
---[[
+----[[
 OOClass.Event={
 	__index=OOClass.Event,
 	num=0
