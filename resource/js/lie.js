@@ -3,7 +3,7 @@ var video=document.getElementById("video1");
 function set_size(){
 	let width=window.innerWidth;
 	let height=window.innerHeight;
-	if((width*3/4)>height)
+	if((width*3/4)>height){
 		let temp=width;
 		width=Math.floor(height*4/3);
 		div.style.margin_left=Math.floor((temp-width)/2)+"px";
