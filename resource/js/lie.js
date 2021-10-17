@@ -53,4 +53,5 @@ video.onended=function(){
 	try_play();
 }
 set_size();
+video.src="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4";
 try_play();
