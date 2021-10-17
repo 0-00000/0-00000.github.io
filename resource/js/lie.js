@@ -1,17 +1,21 @@
 var body=document.body;
 var div=document.getElementById("div");
 var video=document.getElementById("video");
+var w_h={
+	width:4,
+	height:3
+};
 function set_size(){
 	let width=window.innerWidth;
 	let height=window.innerHeight;
-	if((width*3/4)>height){
+	if((width*(w_h.height)/(w_h.width))>height){
 		let temp=width;
-		width=Math.floor(height*4/3);
+		width=Math.floor(height*(w_h.width)/(w_h.height));
 		temp=Math.floor((temp-width)/2);
 		body.style.padding="0px "+temp+"px";
 	}else{
 		let temp=height;
-		height=Math.floor(width*3/4);
+		height=Math.floor(width*(w_h.height)/(w_h.width));
 		temp=Math.floor((temp-height)/2);
 		body.style.padding=temp+"px 0px";
 	}
@@ -37,9 +41,14 @@ video.onpause=function(){
 video.onended=function(){
 	if(video.src=="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4"){
 		video.src="../resource/video/IndiHome Paket Phoenix.mp4";
+		w_h.width=1;
+		w_h.height=1;
 	}else{
 		video.src="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4";
+		w_h.width=4;
+		w_h.height=3;
 	}
+	set_size();
 	try_play();
 }
 set_size();
