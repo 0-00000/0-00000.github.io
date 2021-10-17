@@ -28,7 +28,7 @@ function try_play(){
 		setTimeout(try_play,100);
 	}
 }
-body.onresize=set_size();
+body.onresize=set_size;
 video.onpause=function(){
 	if(video.duration!=video.currentTime){
 		try_play();
@@ -40,6 +40,7 @@ video.onended=function(){
 	}else{
 		video.src="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4";
 	}
+	try_play();
 }
 set_size();
 try_play();
