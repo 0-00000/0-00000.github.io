@@ -39,19 +39,18 @@ video.onpause=function(){
 	}
 }
 video.onended=function(){
-	if(video.src=="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4"){
+	if(video.src!="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4"){
+		video.src="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4";
+		w_h.width=4;
+		w_h.height=3;
+	}else{
 		video.src="../resource/video/IndiHome Paket Phoenix.mp4";
 		video.currentTime=60;
 		w_h.width=1;
 		w_h.height=1;
-	}else{
-		video.src="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4";
-		w_h.width=4;
-		w_h.height=3;
 	}
 	set_size();
 	try_play();
 }
 set_size();
-video.src="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4";
 try_play();
