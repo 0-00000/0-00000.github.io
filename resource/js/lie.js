@@ -55,8 +55,5 @@ video.onended=function(){
 	set_size();
 	try_play();
 }
-video.onabort=function(){
-	video.load();
-}
 set_size();
 try_play();
