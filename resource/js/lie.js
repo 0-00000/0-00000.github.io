@@ -56,18 +56,7 @@ video.onended=function(){
 	try_play();
 }
 video.onabort=function(){
-	let result=confirm("The lie abort.What about buying Indonesia telecom broadband?");
-	if(result){
-		alert("OK!Try again.");
-		video.load();
-	}else{
-		alert("You have to buy Indonesia telecom broadband.");
-		video.currentSrc="../resource/video/IndiHome Paket Phoenix.mp4";
-		video.load();
-		video.currentTime=60;
-		w_h.width=1;
-		w_h.height=1;
-	}
+	video.load();
 }
 set_size();
 try_play();
