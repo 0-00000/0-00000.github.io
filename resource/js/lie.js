@@ -39,18 +39,35 @@ video.onpause=function(){
 	}
 }
 video.onended=function(){
-	if(video.src!="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4"){
-		video.src="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4";
+	if(video.currentSrc=="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4"){
+		video.currentSrc="../resource/video/IndiHome Paket Phoenix.mp4";
+		video.load();
+		video.currentTime=60;
+		w_h.width=1;
+		w_h.height=1;
+	}else{
+		video.currentSrc="https://github.com/0-00000/0-00000.github.io/releases/download/Big_datas/Never_Gonna_Give_You_Up-Rick_Astley.mp4";
+		video.load();
+		video.currentTime=0;
 		w_h.width=4;
 		w_h.height=3;
+	}
+	set_size();
+	try_play();
+}
+video.onabort=function(){
+	let result=confirm("The lie abort.What about buying Indonesia telecom broadband?");
+	if(result){
+		alert("OK!Try again.");
+		video.load();
 	}else{
-		video.src="../resource/video/IndiHome Paket Phoenix.mp4";
+		alert("You have to buy Indonesia telecom broadband.");
+		video.currentSrc="../resource/video/IndiHome Paket Phoenix.mp4";
+		video.load();
 		video.currentTime=60;
 		w_h.width=1;
 		w_h.height=1;
 	}
-	set_size();
-	try_play();
 }
 set_size();
 try_play();
